@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import Loading from "../layouts/Loading"
-import UserItem from "./userItem"
+import UserItem from "./UserItem"
 import GithubContext from "../../context/Github/GithubContext"
 
 
