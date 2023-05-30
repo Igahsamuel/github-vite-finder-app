@@ -16,7 +16,7 @@ export const searchUsers = async(text) => {
     })
     const response = await fetch( `${GITHUB_URL}/search/users?${params}`, {
         headers: {
-            Authorization: `token ${GITHUB_TOKEN}`
+            Authorization: `Bearer ${GITHUB_TOKEN}`
         }
     })
     const {items} = await response.json()
@@ -27,7 +27,7 @@ export const searchUsers = async(text) => {
 export const getUser = async(login) => {
     const response = await fetch(`${GITHUB_URL}/users/${login}`, {
         headers: {
-            Authorization: `token ${GITHUB_TOKEN}`
+            Authorization: `Bearer ${GITHUB_TOKEN}`
         }
     })
     const data = await response.json()
@@ -37,7 +37,7 @@ export const getUser = async(login) => {
 export const getUserRepos = async(login) => {
     const response = await fetch(`${GITHUB_URL}/users/${login}/repos`, {
         headers: {
-            Authorization: `token ${GITHUB_TOKEN}`
+            Authorization: `Bearer ${GITHUB_TOKEN}`
         }
     })
     const data = await response.json()
